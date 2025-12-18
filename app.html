@@ -1,1 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sami Layadi | Mini Web App</title>
+
+  <style>
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:#0b2a4a;
+      color:#0f172a;
+    }
+
+    .wrap{
+      max-width:900px;
+      margin:0 auto;
+      padding:24px;
+    }
+
+    h1{ color:white; }
+
+    a{ color:#e0f2fe; }
+
+    .card{
+      background:white;
+      border-radius:16px;
+      padding:18px;
+      margin-bottom:18px;
+      box-shadow:0 10px 30px rgba(0,0,0,.18);
+    }
+
+    button{
+      border:0;
+      padding:10px 14px;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:600;
+      background:#1b74e4;
+      color:white;
+    }
+
+    input{
+      padding:10px;
+      border-radius:10px;
+      border:1px solid #cbd5e1;
+      width:100%;
+      margin-top:8px;
+    }
+
+    .small{ color:#475569; font-size:14px; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>Mini Web App</h1>
+    <p>
+      <a href="scratch.html">← Back to Scratch Page</a> |
+      <a href="index.html">Professional Site</a>
+    </p>
+
+    <div class="card">
+      <h2>Number Guessing Game</h2>
+      <p class="small">
+        I collaborated with AI to build this interactive web app using HTML, CSS, and JavaScript.
+      </p>
+
+      <button onclick="startGame()">Start New Game</button>
+
+      <div style="margin-top:12px;">
+        <label>Your guess (1–10):</label>
+        <input type="number" id="guessInput" min="1" max="10" />
+      </div>
+
+      <button style="margin-top:12px;" onclick="makeGuess()">Guess</button>
+
+      <p id="message" class="small"></p>
+    </div>
+  </div>
+
+  <script>
+    let secretNumber;
+    let attempts;
+
+    function startGame(){
+      secretNumber = Math.floor(Math.random() * 10) + 1;
+      attempts = 0;
+      document.getElementById("message").textContent =
+        "New number chosen! Enter a guess.";
+    }
+
+    function makeGuess(){
+      const guess = Number(document.getElementById("guessInput").value);
+      attempts++;
+
+      if(!guess){
+        document.getElementById("message").textContent =
+          "Please enter a number.";
+        return;
+      }
+
+      if(guess === secretNumber){
+        document.getElementById("message").textContent =
+          `Correct! You guessed it in ${attempts} tries.`;
+      } else if(guess < secretNumber){
+        document.getElementById("message").textContent =
+          "Too low. Try again.";
+      } else {
+        document.getElementById("message").textContent =
+          "Too high. Try again.";
+      }
+    }
+  </script>
+</body>
+</html>
 
