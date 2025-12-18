@@ -1,1 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sami Layadi | Scratch Page</title>
+
+  <!-- From-scratch stylesheet -->
+  <link rel="stylesheet" href="scratch.css">
+</head>
+
+<body>
+  <div class="header">
+    <h1>Scratch Page</h1>
+    <p>
+      This page demonstrates HTML + CSS skills (lists, anchor, image, YouTube embed, layout divs).
+    </p>
+    <p>
+      <a href="index.html">← Back to professional site</a>
+      &nbsp;|&nbsp;
+      <a href="app.html">Open my mini web app →</a>
+    </p>
+  </div>
+
+  <div class="wrapper">
+    <div class="main">
+      <div class="note">
+        <strong>On-page anchor demo:</strong>
+        Jump to <a href="#video">the YouTube video section</a>.
+      </div>
+
+      <h2>Something I’m into</h2>
+      <p>
+        Write about a hobby/passion (sports, fitness, marketing, content creation, etc.).
+        Keep it readable and professional.
+      </p>
+
+      <h3>Nested list requirement</h3>
+      <!-- Ordered list containing an unordered list -->
+      <ol>
+        <li>What I enjoy about it
+          <ul>
+            <li>It pushes me to improve</li>
+            <li>It’s fun with a team</li>
+            <li>It gives me great content ideas</li>
+          </ul>
+        </li>
+        <li>What I’m learning right now</li>
+        <li>My goal for this semester</li>
+      </ol>
+
+      <h3>Image (not from a Bootstrap theme)</h3>
+      <p class="note">
+        Make sure the image loads (no broken content). If it doesn’t, confirm the filename is exactly <strong>hobby.jpg</strong>.
+      </p>
+      <img class="custom-img" src="hobby.jpg" alt="A photo related to my hobby" />
+
+      <h3 id="video">Embedded YouTube video</h3>
+      <p>This is an embedded YouTube video using an iframe:</p>
+
+      <div style="position:relative;padding-top:56.25%;border-radius:14px;overflow:hidden;border:1px solid #d9e2ec;">
+        <iframe
+          style="position:absolute;top:0;left:0;width:100%;height:100%;"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="YouTube video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <h3>Navigation</h3>
+      <p>
+        Back to professional pages:
+        <a href="index.html">Home</a> •
+        <a href="resume.html">Résumé</a> •
+        <a href="portfolio.html">Portfolio (Tableau)</a>
+      </p>
+    </div>
+
+    <div class="side">
+      <h2>Checklist</h2>
+      <ul>
+        <li>Nested list ✅</li>
+        <li>Image loads ✅</li>
+        <li>YouTube embed ✅</li>
+        <li>On-page anchor ✅</li>
+        <li>Custom CSS file ✅</li>
+        <li>3+ div layout ✅</li>
+        <li>Link to mini app ✅</li>
+      </ul>
+
+      <div class="note">
+        <strong>Mini Web App:</strong>
+        <a href="app.html">Click here to open it</a>.
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <small>© <span id="year"></span> Sami Layadi — Scratch page built from scratch (no Bootstrap).</small>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
