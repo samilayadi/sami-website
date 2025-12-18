@@ -1,1 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sami Layadi | Professional Website</title>
+
+  <!-- Bootstrap theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/flatly/bootstrap.min.css">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background:#0b2a4a;">
+  <div class="container">
+    <a class="navbar-brand fw-semibold" href="index.html">Sami Layadi</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="resume.html">Résumé</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="container my-5">
+  <div class="p-4 p-md-5 rounded-3 hero">
+    <h1 class="display-6 fw-bold">Hi, I’m Sami Layadi</h1>
+    <p class="lead">
+      Marketing student at Brigham Young University, Division I cheerleader, and
+      experienced in digital media, live production, and customer-facing roles.
+    </p>
+    <a class="btn btn-primary" href="resume.html">View My Résumé</a>
+  </div>
+</header>
+
+<main class="container pb-5">
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h2 class="h5">About Me</h2>
+          <p>
+            I enjoy roles that combine communication, teamwork, and creativity.
+            I’ve worked in hospitality, live broadcasting, and athletics, and I’m
+            pursuing opportunities in marketing and media.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h2 class="h5">What’s On This Site</h2>
+          <ul>
+            <li>HTML résumé (no PDFs)</li>
+            <li>Live Tableau visualization</li>
+            <li>Scratch page showing HTML/CSS skills</li>
+            <li>Interactive mini web app</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="border-top py-4">
+  <div class="container small text-muted">
+    © <span id="year"></span> Sami Layadi
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
 
