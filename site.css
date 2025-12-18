@@ -1,1 +1,53 @@
+/* Professional tweaks on top of the Bootswatch theme */
+:root{
+  --brand: #0b2a4a;
+  --accent: #1b74e4;
+  --muted: #6c757d;
+}
+
+/* Smooth out typography */
+body{
+  line-height: 1.6;
+}
+
+/* Make the navbar feel intentional */
+.navbar-brand{
+  letter-spacing: .2px;
+}
+
+/* Hero section styling (used on index.html) */
+.hero{
+  background: linear-gradient(135deg, rgba(11,42,74,.08), rgba(27,116,228,.06));
+  border: 1px solid rgba(0,0,0,.06);
+}
+
+/* Section headings */
+.section-title{
+  color: var(--brand);
+}
+
+/* Skill badge (optional if you use it later) */
+.badge-skill{
+  background: rgba(27,116,228,.12);
+  color: var(--brand);
+  border: 1px solid rgba(27,116,228,.25);
+}
+
+/* Cards look a bit nicer */
+.card{
+  border-radius: 14px;
+}
+
+/* Footer links (if you add them later) */
+.footer-link{
+  text-decoration: none;
+}
+.footer-link:hover{
+  text-decoration: underline;
+}
+
+/* Make buttons slightly rounder */
+.btn{
+  border-radius: 12px;
+}
 
